@@ -17,12 +17,12 @@ aptitude install git python3-pip curl
 curl -sL https://deb.nodesource.com/setup_6.x | bash -
 aptitude install nodejs -y
 
-curl https://github.com/atom/atom/releases/download/v1.10.2/atom-amd64.deb
+wget https://github.com/atom/atom/releases/download/v1.10.2/atom-amd64.deb
 
 dpkg -i atom-amd64.deb
 
 # Things for code completion
 npm install tern -g
-pip3 install tern
+pip3 install jedi
 
 apm install react atom-ternjs autocomplete-python
