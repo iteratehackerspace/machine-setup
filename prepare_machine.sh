@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -uou pipefail
+set -euo pipefail
 
 if [ "$(whoami)" != "root" ]; then
     printf "Must be run as sudo\n"
@@ -22,7 +22,7 @@ wget https://github.com/atom/atom/releases/download/v1.10.2/atom-amd64.deb
 dpkg -i atom-amd64.deb
 
 # Things for code completion
-npm install tern -g
+su - iterate -c "npm install tern -g"
 pip3 install jedi
 
-apm install react atom-ternjs autocomplete-python
+npm install react atom-ternjs autocomplete-python
